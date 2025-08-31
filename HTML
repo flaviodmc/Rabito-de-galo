@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cardápio de Drinks</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: #eeeeee;
+    margin: 0; padding: 0;
+  }
+  header {
+    background: #282828;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .drink {
+    background: #1f1f1f;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    box-shadow: 0 0 8px #333;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .drink:hover {
+    background: #323232;
+  }
+  .drink-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+  .ingredients {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #ccc;
+    display: none;
+    margin-top: 0.5rem;
+  }
+  .drink.active .ingredients {
+    display: block;
+  }
+  footer {
+    text-align: center;
+    color: #666;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<header>Cardápio de Drinks</header>
+<main>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Fitzgerald</div>
+    <div class="ingredients">Gin, limão siciliano, angostura, xarope</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Pisco Sour</div>
+    <div class="ingredients">Pisco, limão, xarope, clara de ovo</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Take it Rye</div>
+    <div class="ingredients">Whisky bourbon, amaretto, xarope de maple</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">NY Sour</div>
+    <div class="ingredients">Whisky bourbon, limão siciliano, xarope, angostura, vinho tinto, clara de ovo</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Whisky Sour</div>
+    <div class="ingredients">Whisky bourbon, limão siciliano, xarope, clara de ovo</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Manhattan</div>
+    <div class="ingredients">Whisky bourbon, vermute doce, angostura</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Carmina Burana</div>
+    <div class="ingredients">Gin, vermute doce, amaretto, angostura</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Banzeiro</div>
+    <div class="ingredients">Cachaça, limão, xarope, vinho tinto, espuma de gengibre</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Old Fashioned</div>
+    <div class="ingredients">Whisky bourbon, xarope, angostura</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Coffee Old Fashioned</div>
+    <div class="ingredients">Whisky bourbon, café, xarope de maple, angostura</div>
+  </section>
+  <section class="drink" onclick="toggleDetails(this)">
+    <div class="drink-name">Dry Martini</div>
+    <div class="ingredients">Gin, vermute seco</div>
+  </section>
+</main>
+<footer>Toque no nome do drink para ver os ingredientes.</footer>
+
+<script>
+  function toggleDetails(elem) {
+    elem.classList.toggle('active');
+  }
+</script>
+</body>
+</html>
